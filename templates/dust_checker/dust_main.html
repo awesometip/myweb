@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="row justify-content-center mb-2">
+    <div class="col-md-4">
+        <div class="card" >
+           
+            <div class="card-body">
+                <h5 class="card-title">미세먼지 수치</h5>
+                <p class="card-text">{{pm10}}</p>
+                <a href="{% url 'dust_checker:detail'%}" class="btn btn-primary">>> 자세히</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
