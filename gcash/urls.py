@@ -6,4 +6,5 @@ app_name = 'gcash'
 urlpatterns=[
     path('', views.index, name='index'),
     path('/detail', views.detail, name='detail'),
+    path('/detailtest', views.detailtest, name='detailtest'),
 ]
