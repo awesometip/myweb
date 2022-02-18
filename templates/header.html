@@ -1,19 +1,44 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">처음으로</a>
+    <a class="navbar-brand" href="#">거제사랑 사용하기</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'dust_checker:detail' %}">경남미세먼지</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
-      <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'gcash:detail' %}">거상가맹점</a>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'dust_checker:detail' %}">경남 미세먼지</a>
         </li>
-        
-      </form>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            거제사랑상품권가맹점
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'gcash:detail' %}">전체</a></li>
+              <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">고현동</a></li>
+            <li><a class="dropdown-item" href="#">옥포동</a></li>
+            <li><a class="dropdown-item" href="#">장평동</a></li>
+            <li><a class="dropdown-item" href="#">상문동</a></li>
+            <li><a class="dropdown-item" href="#">수양동</a></li>
+            <li><a class="dropdown-item" href="#">아주동</a></li>
+            <li><a class="dropdown-item" href="#">사등동</a></li>
+            <li><a class="dropdown-item" href="#">장승포동</a></li>
+            <li><a class="dropdown-item" href="#">능포동</a></li>
+            <li><a class="dropdown-item" href="#">연초면</a></li>
+            <li><a class="dropdown-item" href="#">거제면</a></li>
+            <li><a class="dropdown-item" href="#">일운면</a></li>
+            <li><a class="dropdown-item" href="#">동부면</a></li>
+            <li><a class="dropdown-item" href="#">장목면</a></li>
+            <li><a class="dropdown-item" href="#">하청면</a></li>
+            <li><a class="dropdown-item" href="#">둔덕면</a></li>
+            <li><a class="dropdown-item" href="#">남부면</a></li>
+            <li><a class="dropdown-item" href="#">마전동</a></li>
+          </ul>
+      </ul>
     </div>
   </div>
 </nav>

@@ -8,7 +8,7 @@ for line in lines:
     l.append(line.split(','))
 f.close()
 
-data = l[1:500]
+data = l[1:4000]
 
 
 

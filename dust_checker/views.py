@@ -5,7 +5,7 @@ def index(request):
     res = check_air()
     loc = request.POST['location']
     pm10 = res.get(loc)
-    context = {'station' : '회원동', 'pm10' : pm10}
+    context = {'station' : '고현동', 'pm10' : pm10}
     return render(request, 'dust_checker/dust_main.html', context)
 
 def detail(request):
