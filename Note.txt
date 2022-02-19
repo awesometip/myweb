@@ -317,6 +317,7 @@ $ git add .
 $ git commit -m "무엇을 했나"
 $ git push origin master
 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
+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
 
 
 uwsgi --http :8080 --home /home/ubuntu/myvenv/ --chdir /srv/myweb/ -w confg.wsgi
