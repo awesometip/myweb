@@ -3,7 +3,7 @@ Description=uWSGI service
 After=syslog.target
  
 [Service]
-ExecStart=/root/myvenv/bin/uwsgi -i /srv/myweb/.config/uwsgi/myweb.ini
+ExecStart=/home/ubuntu/myvenv/bin/uwsgi -i /srv/myweb/.config/uwsgi/myweb.ini
  
 Restart=always
 KillSignal=SIGQUIT
