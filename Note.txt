@@ -319,6 +319,7 @@ $ git push origin master
 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
 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
 
+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
 
 uwsgi --http :8080 --home /home/ubuntu/myvenv/ --chdir /srv/myweb/ -w confg.wsgi
 
