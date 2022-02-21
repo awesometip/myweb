@@ -321,3 +321,30 @@ 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
 
 
 uwsgi --http :8080 --home /home/ubuntu/myvenv/ --chdir /srv/myweb/ -w confg.wsgi
+
+
+
+// 영역함수 관련 : https://apis.map.kakao.com/web/documentation/#LatLngBounds
+
+
+    let boundsChange = [];
+
+    kakao.maps.event.addListener(map, 'idle', function() {
+      boundsChange = []; // idle 발생 시 마다 배열 초기화
+      const bounds = map.getBounds(); // 지도 영역 반환
+
+      // 마커를 생성합니다
+      for(let i = 0 ; i < boundMarker.length ; i++) {
+        const marker = new kakao.maps.Marker({
+          title: boundMarker[i].factory_name,
+          position: new kakao.maps.LatLng(boundMarker[i].y, boundMarker[i].x), // 마커의 위치
+        });
+
+        //영역에 포함되는 마커들만 출력
+        if (bounds.contain(marker.getPosition()) == true) {
+          boundsChange.push({'title':marker.getTitle(), 'lat':marker.getPosition().Ga, 'lng':marker.getPosition().Ha, 'cntr_pwr': boundMarker[i].cntr_pwr})
+        }
+      }
+     
+    });
+ 
