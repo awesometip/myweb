@@ -25,12 +25,16 @@ var positions = []
 {% for i in data %} 
     positions.push({"content":"{{i.3}}", "latlng":new kakao.maps.LatLng({{i.5}}, {{i.6}}) })
 {% endfor %}
+var imageSrc = "https://img.icons8.com/ultraviolet/80/000000/marker.png";
+var imageSize = new kakao.maps.Size(32, 32);
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 
 for (var i = 0; i < positions.length; i ++) {
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
-        position: positions[i].latlng // 마커의 위치
+        position: positions[i].latlng, // 마커의 위치
+        image : markerImage
     });
     var iwRemoveable = true
     // 마커에 표시할 인포윈도우를 생성합니다 
