@@ -26,7 +26,9 @@ SECRET_KEY = '!0$&tse^076mg&k)lr&dil--i3syt0x-(hi=@$ccif*#7lp7u-'
 DEBUG = True
 
 #ALLOWED_HOSTS = ['34.64.161.44']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["34.64.161.44", "whatisgift.com", "django-container-tmyts.run.goorm.io"
+    
+]
 
 
 # Application definition
