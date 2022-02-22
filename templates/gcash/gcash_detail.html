@@ -1,20 +1,7 @@
-
 <html>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-219645572-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-219645572-1');
-</script>
-
-
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <title>거제사랑 상품권 맵</title>
-    
 </head>
 <body>
 {% extends 'main.html' %}
@@ -64,14 +51,17 @@ if (navigator.geolocation) {
         
     displayMarker(locPosition);
 }
-
+var imageSrc = "https://elog.co.kr/wp-content/uploads/2022/02/icons8-%E1%84%8C%E1%85%B5%E1%84%85%E1%85%B5%E1%84%8C%E1%85%A5%E1%86%A8-%E1%84%8B%E1%85%AE%E1%86%AF%E1%84%90%E1%85%A1%E1%84%85%E1%85%B5.gif";
+var imageSize = new kakao.maps.Size(32, 32);
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 // 지도에 마커와 인포윈도우를 표시하는 함수입니다
 function displayMarker(locPosition) {
 
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({  
         map: map, 
-        position: locPosition
+        position: locPosition,
+        image : markerImage
     }); 
    
     // 지도 중심좌표를 접속위치로 변경합니다
